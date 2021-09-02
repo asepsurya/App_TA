@@ -1,0 +1,7 @@
+<?php
+mysql_connect("localhost","root","");
+mysql_select_db("dbtera");
+$lama = 3;
+$query = "DELETE FROM guestbook WHERE DATEDIFF (CURDATE(),tanggal)>$lama";
+$hasil = mysql_query($query);
+?>
